@@ -62,13 +62,22 @@
     1/ fetch product from backend
     2/ create 3 columns for image, info and action
 
-13. Create Loading and Message Component (09h00-9h30, 07/02/2022)
+13. Create Loading and Message Component (09h00-9h30, 08/02/2022)
     1/ Create loading component
     2/ Use spinner component
     3/ Create message component
     4/ Create utils.js to define getError function
 
-14. Implement Add To Cart
+14. Implement Add To Cart (19h00-20h30, 08/02/2022)
     1/ Create React Context
     2/ define reducer
     3/ create store provider
+
+15. Complete Add To Cart (09h00-10h30, 09/02/2022)
+    1/ Check exist item in the cart
+    2/ Check count in stock in backend
+
+16. Create Cart Screen
+    i. create 2 columns
+    ii. display items list
+    iii. create action column
