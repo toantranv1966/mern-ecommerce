@@ -4,10 +4,10 @@ import axios from 'axios';
 import logger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Product from '../componetns/Product';
+import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
-import LoadingBox from '../componetns/LoadingBox';
-import MessageBox from '../componetns/MessageBox';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 // import data from '../data';
 
 const reducer = (state, action) => {
@@ -48,7 +48,7 @@ function HomeScreen() {
   return (
     <div>
       <Helmet>
-        <title>Amazona</title>
+        <title>Ecommerce</title>
       </Helmet>
       <h1>Feature Products</h1>
       <div className="products">

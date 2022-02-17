@@ -77,7 +77,12 @@
     1/ Check exist item in the cart
     2/ Check count in stock in backend
 
-16. Create Cart Screen
+16. Create Cart Screen (06h00-10h30, 15/02/2022)
     i. create 2 columns
     ii. display items list
     iii. create action column
+
+17. Complete Cart Screen (06h00-14h00, 17/02/2022)
+    i. click handle for inc/dec item
+    ii/ click handle for remove item
+    iii/ click handle for checkout

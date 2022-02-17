@@ -7,10 +7,10 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import Rating from '../componetns/Rating';
+import Rating from '../components/Rating';
 import { Helmet } from 'react-helmet-async';
-import LoadingBox from '../componetns/LoadingBox';
-import MessageBox from '../componetns/MessageBox';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
 import { Store } from '../Store';
 
@@ -60,7 +60,6 @@ function ProductScreen() {
       window.alert('Sorry. Product is out of stock');
       return;
     }
-
     ctxDispatch({
       type: 'CART_ADD_ITEM',
       payload: { ...product, quantity },
