@@ -96,3 +96,15 @@
     i. create atlas mongodb database : npm install mongoose --save + npm i dotenv
     ii. install local mongodb database
     iii. connect to mongodb database
+
+20. Seed Sample Data
+    i. create Product model
+    ii. create User model
+    iii. create seed route
+    iv. use route in server.js
+    v. seed sample product
+
+21. Seed Sample Users
+    i. create user model
+    ii. seed sample users
+    iii. create user routes
