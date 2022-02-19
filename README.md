@@ -86,3 +86,8 @@
     i. click handle for inc/dec item
     ii/ click handle for remove item
     iii/ click handle for checkout
+
+18. Create Signin Screen
+    i. create signin form
+    ii. add email & password
+    iii. add signin button
