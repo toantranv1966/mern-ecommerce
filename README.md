@@ -128,3 +128,7 @@
     i. create input forms
     ii. handle submit
     iii. create backend api
+
+26. Implement Select Payment Method Screen (20/02/2022 13h00 - 14h30)
+    i. create input form
+    ii. handle submit
