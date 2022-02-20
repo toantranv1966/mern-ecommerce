@@ -87,7 +87,7 @@
     ii/ click handle for remove item
     iii/ click handle for checkout
 
-18. Create Signin Screen
+18. Create Signin Screen (06h00-14h00, 19/02/2022)
     i. create signin form
     ii. add email & password
     iii. add signin button
@@ -113,3 +113,13 @@
     i. create signin api
     ii. npm install jsonwebtoken
     iii. define generateToken
+
+23. Complete Signin Screen (06h00-18h00, 19/02/2022)
+    i. handle submit actions
+    ii. save token in store and local storage
+    iii. show user name in header
+
+24. Create Shipping Screen (06h00-18h00, 19/02/2022)
+    i. Create form inputs (06h00-7h00)
+    ii. handle save shipping address (09h00-10h30)
+    iii. add checkout wizard bar
