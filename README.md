@@ -122,4 +122,9 @@
 24. Create Shipping Screen (06h00-18h00, 19/02/2022)
     i. Create form inputs (06h00-7h00)
     ii. handle save shipping address (09h00-10h30)
-    iii. add checkout wizard bar
+    iii. add checkout wizard bar (11h00-11h30)
+
+25. Create Signup Screen (20/02/2022 13h00 - 14h30)
+    i. create input forms
+    ii. handle submit
+    iii. create backend api
