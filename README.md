@@ -132,3 +132,11 @@
 26. Implement Select Payment Method Screen (20/02/2022 13h00 - 14h30)
     i. create input form
     ii. handle submit
+
+27. Create Place Order Screen (20/02/2022 16h00 - 18h30)
+
+    1. show cart items, payment and address
+
+28. Implement Place Order Action (22/02/2022 6h00 - 7h00)
+    1. handle place order action
+    2. create order create api
