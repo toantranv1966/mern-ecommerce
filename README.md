@@ -138,5 +138,11 @@
     1. show cart items, payment and address
 
 28. Implement Place Order Action (22/02/2022 6h00 - 7h00)
+
     1. handle place order action
     2. create order create api
+
+29. Create Order Screen (22/02/2022 08h50 - 10h00)
+    i. create backend api for order:id
+    ii. fetch order api in frontend
+    iii. show order information in two columns
