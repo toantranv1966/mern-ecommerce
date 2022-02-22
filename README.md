@@ -142,7 +142,18 @@
     1. handle place order action
     2. create order create api
 
-29. Create Order Screen (22/02/2022 08h50 - 10h00)
+29. Create Order Screen (22/02/2022 08h50 - 11h30)
     i. create backend api for order:id
     ii. fetch order api in frontend
     iii. show order information in two columns
+
+30. Pay Order by PayPal (22/02/2022 13h30 - 15h30)
+    i. generate paypal client id
+    ii. create api to return client id
+    iii. install react-paypal-js
+    iv. use PayPalScriptProvider in index.js
+    v. use PayPalScriptReducer in Order Screen
+    vi. implement loadPayPalScript function
+    vii. render paypal button
+    viii. implement onApprove payment function
+    ix. create pay order api in backend
