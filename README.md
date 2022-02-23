@@ -157,3 +157,8 @@
     vii. render paypal button
     viii. implement onApprove payment function
     ix. create pay order api in backend
+
+31. Display Order History 22/02/2022 16h00 - ...)
+    i. create order screen
+    ii. create order history api
+    iii. use api in frontend
