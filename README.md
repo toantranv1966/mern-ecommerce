@@ -158,7 +158,18 @@
     viii. implement onApprove payment function
     ix. create pay order api in backend
 
-31. Display Order History 22/02/2022 16h00 - ...)
+31. Display Order History (22/02/2022 16h00 - 18h00)
     i. create order screen
     ii. create order history api
     iii. use api in frontend
+
+32. Create Profile Screen (23/02/2022 19h30 - 21h00)
+    i. get user info from context
+    ii. show user information
+    iii. create use update api
+    iv. update user info
+
+33. List Users
+    i. build api for list users
+    ii. create UserList Screen
+    iii. create order details constant, action and reducer
