@@ -169,7 +169,11 @@
     iii. create use update api
     iv. update user info
 
-33. List Users
-    i. build api for list users
-    ii. create UserList Screen
-    iii. create order details constant, action and reducer
+33. Public To Heroku
+    i. create and config node project
+    ii. serve build folder in frontend folder
+    iii. Create Heroku account
+    iv. connect it to github
+    v. Create mongodb atlas database
+    vi. Set database connection in Heroku env variables
+    vii. commit and push
