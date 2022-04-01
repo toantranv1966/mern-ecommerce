@@ -169,7 +169,7 @@
     iii. create use update api
     iv. update user info
 
-33. Public To Heroku
+33. Public To Heroku (27/03/2022)
     i. create and config node project
     ii. serve build folder in frontend folder
     iii. Create Heroku account
@@ -177,3 +177,17 @@
     v. Create mongodb atlas database
     vi. Set database connection in Heroku env variables
     vii. commit and push
+
+34. Add Sidebar and Search Box (29/03/2022)
+    i. add sidebar
+    ii. add search Box
+
+35. Create Search Screen
+    i. show filters
+    ii. create api for searching products
+    iii. display results
+
+36. i. Create Admin Menu
+    ii. define protected route component
+    iii. define admin route component
+    iv. add menu for admin in header
