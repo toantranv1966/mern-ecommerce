@@ -120,7 +120,7 @@ function App() {
                         <NavDropdown.Item>Products</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/orderlist">
-                        <NavDropdown.Item>Order</NavDropdown.Item>
+                        <NavDropdown.Item>Orders</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/userlist">
                         <NavDropdown.Item>Users</NavDropdown.Item>
