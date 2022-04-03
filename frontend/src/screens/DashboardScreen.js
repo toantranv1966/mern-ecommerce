@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function DashboardScreen() {
-  return <div></div>;
+  return <div>DashboardScreen</div>;
 }
