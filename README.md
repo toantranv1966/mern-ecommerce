@@ -192,7 +192,13 @@
     iii. define admin route component
     iv. add menu for admin in header
 
-37. Create Dashboard Screen
+37. Create Dashboard Screen (13h30 14/04/2022)
+
     1. create dashboard ui
     2. implement backend api
     3. connect ui to backend
+
+38. Manage Products (20h 14/04/2022)
+    1. create products list ui
+    2. implement backend api
+    3. fetch data
