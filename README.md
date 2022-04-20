@@ -199,6 +199,12 @@
     3. connect ui to backend
 
 38. Manage Products (20h 14/04/2022)
+
     1. create products list ui
     2. implement backend api
     3. fetch data
+
+39. Create Product
+    1. create products button
+    2. implement backend api
+    3. handle on click
