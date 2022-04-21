@@ -216,6 +216,19 @@
     2. create edit product ui
     3. dispaly product info in the input boxes
 
-41. Implement Update Product
+41. Implement Update Product (10h30 21/04/2022)
+
     1. create edit product backend api
     2. handle update click
+
+42. Upload Product Image (14h00 21/04/2022)
+
+    1. create cloudinary account
+    2. use the api key in env file
+    3. handle upload file
+    4. implement backend api to upload
+
+43. Delete Product (15h30 21/04/2022)
+    1. show delete button
+    2. implement backend api
+    3. handle on click
