@@ -229,6 +229,12 @@
     4. implement backend api to upload
 
 43. Delete Product (15h30 21/04/2022)
+
     1. show delete button
     2. implement backend api
     3. handle on click
+
+44. List Orders (20h00 22/04/2022)
+    1. create order list screen
+    2. implement backen api
+    3. fetch and display orders
