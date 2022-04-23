@@ -235,6 +235,12 @@
     3. handle on click
 
 44. List Orders (20h00 22/04/2022)
+
     1. create order list screen
     2. implement backen api
     3. fetch and display orders
+
+45. Deliver Order (09h00 23/04/2022)
+    1. add deliver button
+    2. handle click action
+    3. implement backend api for deliver
