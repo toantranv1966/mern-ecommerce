@@ -266,7 +266,19 @@
     4. implement backend api
     5. handle edit click
 
-49. Delete User
+49. Delete User (10h30 24/04/2022)
+
     1. add delete button
     2. handle click action
     3. implement backend api for delete
+
+50. 50. Choose Address On Google Map
+    1. create google map credentials
+    1. update .env file with Google Api Key
+    1. create api to send google api to frontend
+    1. create map screen
+    1. fetch google api
+    1. getUserLocation
+    1. install @react-google-maps/api
+    1. use it in shipping screen
+    1. apply map to the checkout screen
