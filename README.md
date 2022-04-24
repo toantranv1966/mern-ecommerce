@@ -259,8 +259,14 @@
     3. fetch and display users
 
 48. Edit User (19h30 23/04/2022)
+
     1. create edit button
     2. create edit product ui
     3. display product info in the input boxes
     4. implement backend api
     5. handle edit click
+
+49. Delete User
+    1. add delete button
+    2. handle click action
+    3. implement backend api for delete
