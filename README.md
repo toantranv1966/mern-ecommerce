@@ -253,6 +253,14 @@
     3. implement backen api for delete
 
 47. List Users (16h00 23/04/2022)
+
     1. create user list screen
     2. implement backen api
     3. fetch and display users
+
+48. Edit User (19h30 23/04/2022)
+    1. create edit button
+    2. create edit product ui
+    3. display product info in the input boxes
+    4. implement backend api
+    5. handle edit click
