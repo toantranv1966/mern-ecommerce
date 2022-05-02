@@ -272,7 +272,7 @@
     2. handle click action
     3. implement backend api for delete
 
-50. Choose Address On Google Map
+50. Choose Address On Google Map (15h00 24/04/2022)
 
     1. create google map credentials
     2. update .env file with Google Api Key
@@ -284,10 +284,22 @@
     8. use it in shipping screen
     9. apply map to the checkout screen
 
-51. Email order receipt by mailgun
+51. Email order receipt by mailgun (19h00 24/04/2022)
+
     1. create mailgun account
     2. add and verify your domain to mailgun
     3. install mailgun-js
     4. set api key in env file
     5. change pay order in orderRouter
     6. send email order receipt
+
+52. Review Orders (9h30 28/04/2022)
+
+    1. create submit review form
+    2. handle submit
+    3. implement backend api for review
+
+53. Upload multiple Images 15h30 (28/04/2022)
+    1. add images to product model
+    2. get images in edit screen
+    3. show images in product screen
