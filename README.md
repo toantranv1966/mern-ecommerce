@@ -300,6 +300,11 @@
     3. implement backend api for review
 
 53. Upload multiple Images 15h30 (28/04/2022)
+
     1. add images to product model
     2. get images in edit screen
     3. show images in product screen
+
+54. React-messenger-customer-chat
+    1. Cài đặt React-messenger-customer-chat
+    2.
