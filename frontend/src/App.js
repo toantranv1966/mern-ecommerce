@@ -34,7 +34,6 @@ import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -264,11 +263,6 @@ function App() {
           </Container>
         </main>
 
-        <MessengerCustomerChat
-          pageId="<1444607315772142>"
-          appId="<233106164568098>"
-          htmlRef="<REF_STRING>"
-        />
         <footer>
           <div className="text-center">AT Dev Co., Ltd All rights reserved</div>
         </footer>
