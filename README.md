@@ -305,6 +305,9 @@
     2. get images in edit screen
     3. show images in product screen
 
-54. React-messenger-customer-chat
-    1. Cài đặt React-messenger-customer-chat
-    2.
+54. React-messenger-customer-chat (06h00 7/5/2022)
+
+    1. npm install --force react-messenger-customer-chat
+    2. Config pageId, appId & add domain to whilelist facebook
+
+55. React Carousel

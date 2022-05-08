@@ -35,6 +35,7 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import Carousel from 'react-bootstrap/Carousel';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -164,6 +165,87 @@ function App() {
           </Nav>
         </div>
         <main>
+          <Container className="mt-3">
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/SlideCard/s-1.png"
+                  alt="First slide"
+                />
+                <Carousel.Caption>
+                  <Button href="#" variant="danger" size="lg">
+                    Order Now
+                  </Button>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/SlideCard/s-2.png"
+                  alt="Second slide"
+                />
+
+                <Carousel.Caption>
+                  <Button variant="danger" size="lg">
+                    Order Now
+                  </Button>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/SlideCard/s-3.jpg"
+                  alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                  <Button variant="danger" size="lg">
+                    Order Now
+                  </Button>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/SlideCard/s-4.jpg"
+                  alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                  <Button variant="danger" size="lg">
+                    Order Now
+                  </Button>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/SlideCard/s-5.png"
+                  alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                  <Button variant="danger" size="lg">
+                    Order Now
+                  </Button>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/SlideCard/s-6.jpg"
+                  alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                  <Button variant="danger" size="lg">
+                    Order Now
+                  </Button>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+          </Container>
           <Container className="mt-3">
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
