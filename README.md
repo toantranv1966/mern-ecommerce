@@ -310,4 +310,5 @@
     1. npm install --force react-messenger-customer-chat
     2. Config pageId, appId & add domain to whilelist facebook
 
-55. React Carousel
+55. React-Boostrap Carousel (07/05 - 08/05/2022)
+56. Footer Style-Components (09h00 - 14h30 10/05/2022)

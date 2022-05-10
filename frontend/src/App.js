@@ -35,6 +35,7 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import Footer from './components/Footer/index';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -83,7 +84,7 @@ function App() {
                 <i className="fas fa-bars"></i>
               </Button>
               <LinkContainer to="/">
-                <Navbar.Brand>E-commerce</Navbar.Brand>
+                <Navbar.Brand>Cloud Bakery</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -266,9 +267,10 @@ function App() {
           pageId="1444607315772142"
           appId="233106164568098"
         />
-        <footer>
+        <Footer />
+        {/* <footer>
           <div className="text-center">AT Dev Co., Ltd All rights reserved</div>
-        </footer>
+        </footer> */}
       </div>
     </BrowserRouter>
   );

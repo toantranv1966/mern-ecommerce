@@ -50,7 +50,7 @@ function HomeScreen() {
     <div>
       <SliderScreen />
       <Helmet>
-        <title>Ecommerce</title>
+        <title>Cloud Bakery</title>
       </Helmet>
       <h1>Feature Products</h1>
       <div className="products">
