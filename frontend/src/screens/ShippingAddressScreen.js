@@ -59,15 +59,15 @@ export default function ShippingAddressScreen() {
   return (
     <div>
       <Helmet>
-        <title>Shipping Address</title>
+        <title>Địa chỉ giao hàng</title>
       </Helmet>
 
       <CheckoutSteps step1 step2></CheckoutSteps>
       <div className="container small-container">
-        <h1 className="my-3">Shipping Address</h1>
+        <h1 className="my-3">Địa chỉ giao hàng</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlID="fullName">
-            <Form.Label>Full Name</Form.Label>
+            <Form.Label>Họ tên</Form.Label>
             <Form.Control
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
@@ -75,7 +75,7 @@ export default function ShippingAddressScreen() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlID="address">
-            <Form.Label>Address</Form.Label>
+            <Form.Label>Địa chỉ</Form.Label>
             <Form.Control
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -83,7 +83,7 @@ export default function ShippingAddressScreen() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlID="city">
-            <Form.Label>City</Form.Label>
+            <Form.Label>Thành phố</Form.Label>
             <Form.Control
               value={city}
               onChange={(e) => setCity(e.target.value)}
@@ -99,7 +99,7 @@ export default function ShippingAddressScreen() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlID="country">
-            <Form.Label>Country</Form.Label>
+            <Form.Label>Quốc gia</Form.Label>
             <Form.Control
               value={country}
               onChange={(e) => setCountry(e.target.value)}
@@ -113,7 +113,7 @@ export default function ShippingAddressScreen() {
               variant="primary"
               onClick={() => navigate('/map')}
             >
-              Chosse Location On Map
+              Chọn vị trí trên bản đồ
             </Button>
             {shippingAddress.location && shippingAddress.location.lat ? (
               <div>
@@ -121,12 +121,12 @@ export default function ShippingAddressScreen() {
                 LNG:{shippingAddress.location.lng}
               </div>
             ) : (
-              <div>No location</div>
+              <div>Không có vị trí</div>
             )}
           </div>
           <div className="mb-3">
             <Button variant="primary" type="submit">
-              Continue
+              Tiếp tục
             </Button>
           </div>
         </Form>

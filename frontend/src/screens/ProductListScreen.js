@@ -94,7 +94,7 @@ export default function ProductListScreen() {
   }, [page, userInfo, successDelete]);
 
   const createHandler = async () => {
-    if (window.confirm('Are you sure to create ?')) {
+    if (window.confirm('Bạn có chắc chắn muốn tạo sản phẩm ?')) {
       try {
         dispatch({ type: 'CREATE_RESQUEST' });
         const { data } = await axios.post(
@@ -138,12 +138,12 @@ export default function ProductListScreen() {
     <div>
       <Row>
         <Col>
-          <h1>Products</h1>
+          <h1>Danh sách Sản phẩm</h1>
         </Col>
         <Col className="col text-end">
           <div>
             <Button type="button" onClick={createHandler}>
-              Create Product
+              Tạo sản phẩm
             </Button>
           </div>
         </Col>
@@ -161,9 +161,9 @@ export default function ProductListScreen() {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>NAME</th>
-                <th>PRICE</th>
-                <th>CATEGORY</th>
+                <th>TÊN</th>
+                <th>ĐƠN GIÁ</th>
+                <th>DANH MỤC</th>
                 <th>BRAND</th>
                 <th>ACTIONS</th>
               </tr>
@@ -182,7 +182,7 @@ export default function ProductListScreen() {
                       variant="light"
                       onClick={() => navigate(`/admin/product/${product._id}`)}
                     >
-                      Edit
+                      Sửa
                     </Button>
                     &nbsp;
                     <Button
@@ -190,7 +190,7 @@ export default function ProductListScreen() {
                       variant="light"
                       onClick={() => deleteHandler(product)}
                     >
-                      Delete
+                      Xóa
                     </Button>
                   </td>
                 </tr>

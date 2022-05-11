@@ -165,7 +165,7 @@ function ProductScreen() {
               </Row>
             </ListGroup.Item>
             <ListGroup.Item>
-              Description:
+              Mô tả:
               <p>{product.description}</p>
             </ListGroup.Item>
           </ListGroup>
@@ -176,18 +176,18 @@ function ProductScreen() {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <Row>
-                    <Col>Price:</Col>
+                    <Col>Đơn giá:</Col>
                     <Col>${product.price}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Status:</Col>
+                    <Col>Tình trạng:</Col>
                     <Col>
                       {product.countInStock > 0 ? (
-                        <Badge bg="success">In Stock</Badge>
+                        <Badge bg="success">Còn hàng</Badge>
                       ) : (
-                        <Badge bg="danger">Unavailable</Badge>
+                        <Badge bg="danger">Hết hàng</Badge>
                       )}
                     </Col>
                   </Row>
@@ -197,7 +197,7 @@ function ProductScreen() {
                   <ListGroup.Item>
                     <div className="d-grid">
                       <Button onClick={addToCartHandler} variant="primary">
-                        Add to Cart
+                        Thêm vào giỏ hàng
                       </Button>
                     </div>
                   </ListGroup.Item>
@@ -208,10 +208,10 @@ function ProductScreen() {
         </Col>
       </Row>
       <div className="my-3">
-        <h2 ref={reviewsRef}>Reviews</h2>
+        <h2 ref={reviewsRef}>Đánh giá</h2>
         <div className="mb-3">
           {product.reviews.length === 0 && (
-            <MessageBox>There is no review</MessageBox>
+            <MessageBox>Chưa có đánh giá</MessageBox>
           )}
         </div>
         <ListGroup>
@@ -227,20 +227,20 @@ function ProductScreen() {
         <div className="my-3">
           {userInfo ? (
             <form onSubmit={submitHandler}>
-              <h2>Write a customer review</h2>
+              <h2>Nhận xét của khách hàng</h2>
               <Form.Group className="mb-3" controlId="rating">
-                <Form.Label>Rating</Form.Label>
+                <Form.Label>Xếp hạng</Form.Label>
                 <Form.Select
                   aria-label="Rating"
                   value={rating}
                   onChange={(e) => setRating(e.target.value)}
                 >
-                  <option value="">Select...</option>
-                  <option value="1">1- Poor</option>
-                  <option value="2">2- Fair</option>
-                  <option value="3">3- Good</option>
-                  <option value="4">4- Very good</option>
-                  <option value="5">5- Excelent</option>
+                  <option value="">Chọn...</option>
+                  <option value="1">1- Tồi</option>
+                  <option value="2">2- Trung bình</option>
+                  <option value="3">3- Tốt</option>
+                  <option value="4">4- Rất tốt</option>
+                  <option value="5">5- Tuyệt vời</option>
                 </Form.Select>
               </Form.Group>
               <FloatingLabel
@@ -265,11 +265,11 @@ function ProductScreen() {
             </form>
           ) : (
             <MessageBox>
-              Please{' '}
+              Vui lòng{' '}
               <Link to={`/signin?redirect=/product/${product.slug}`}>
-                Sign In
+                Đăng nhập
               </Link>{' '}
-              to write a review
+              để đánh giá
             </MessageBox>
           )}
         </div>

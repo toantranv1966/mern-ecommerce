@@ -41,14 +41,14 @@ export default function CartScreen() {
   return (
     <div>
       <Helmet>
-        <title>Shopping Cart</title>
+        <title>Giỏ hàng của bạn</title>
       </Helmet>
-      <h1>Shopping Cart</h1>
+      <h1>Giỏ hàng của bạn</h1>
       <Row>
         <Col md={8}>
           {cartItems.length === 0 ? (
             <MessageBox>
-              Cart is empty. <Link to="/">Go Shopping</Link>
+              Giỏ hàng trống. <Link to="/">Đi mua hàng</Link>
             </MessageBox>
           ) : (
             <ListGroup>
@@ -105,8 +105,8 @@ export default function CartScreen() {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <h3>
-                    Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}
-                    {` `}) items) : $
+                    Tổng ({cartItems.reduce((a, c) => a + c.quantity, 0)}
+                    {``}) sản phẩm : $
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                   </h3>
                 </ListGroup.Item>
@@ -118,7 +118,7 @@ export default function CartScreen() {
                       onClick={checkoutHandler}
                       disabled={cartItems.length === 0}
                     >
-                      Proceed to Checkout
+                      Thanh toán
                     </Button>
                   </div>
                 </ListGroup.Item>

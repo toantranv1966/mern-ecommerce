@@ -312,3 +312,4 @@
 
 55. React-Boostrap Carousel (07/05 - 08/05/2022)
 56. Footer Style-Components (09h00 - 14h30 10/05/2022)
+57. Multi language Frontend (18h00 - 19h00 10/05/2022 )

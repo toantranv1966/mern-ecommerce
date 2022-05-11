@@ -21,14 +21,14 @@ export const isAuth = (req, res, next) => {
     const token = authorization.slice(7, authorization.length); // Bearer XXXXXX
     jwt.verify(token, process.env.JWT_SECRET, (err, decode) => {
       if (err) {
-        res.status(401).send({ message: 'Invalid Token' });
+        res.status(401).send({ message: 'Token không hợp lệ' });
       } else {
         req.user = decode;
         next();
       }
     });
   } else {
-    res.status(401).send({ message: 'No Token' });
+    res.status(401).send({ message: 'Không có Token' });
   }
 };
 
@@ -36,7 +36,7 @@ export const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next();
   } else {
-    res.status(401).send({ message: 'Invalid Admin Token' });
+    res.status(401).send({ message: 'Admin Token không hợp lệ' });
   }
 };
 
@@ -47,17 +47,19 @@ export const mailgun = () =>
   });
 
 export const payOrderEmailTemplate = (order) => {
-  return `<h1>Thanks for shopping with us</h1>
+  return `<h1>Cảm ơn quý khách đã đặt hàng tại BonPas Bakery,</h1>
   <p>
-  Hi ${order.user.name},</p>
-  <p>We have finished processing your order.</p>
-  <h2>[Order ${order._id}] (${order.createdAt.toString().substring(0, 10)})</h2>
+  Chào ${order.user.name} thân mến,</p>
+  <p>Chúng tôi đã xử lý xong đơn đặt hàng của bạn.</p>
+  <h2>[Thông tin đơn hàng ${order._id}] (${order.createdAt
+    .toString()
+    .substring(0, 10)})</h2>
   <table>
   <thead>
   <tr>
-  <td><strong>Product</strong></td>
-  <td><strong>Quantity</strong></td>
-  <td><strong align="right">Price</strong></td>
+  <td><strong>Sản phẩm</strong></td>
+  <td><strong>Số lượng</strong></td>
+  <td><strong align="right">Đơn giá</strong></td>
   </thead>
   <tbody>
   ${order.orderItems
@@ -74,23 +76,23 @@ export const payOrderEmailTemplate = (order) => {
   </tbody>
   <tfoot>
   <tr>
-  <td colspan="2">Items Price:</td>
+  <td colspan="2">Đơn giá:</td>
   <td align="right"> $${order.itemsPrice.toFixed(2)}</td>
   </tr>
   <tr>
-  <td colspan="2">Shipping Price:</td>
+  <td colspan="2">Giá vận chuyển:</td>
   <td align="right"> $${order.shippingPrice.toFixed(2)}</td>
   </tr>
   <tr>
-  <td colspan="2"><strong>Total Price:</strong></td>
+  <td colspan="2"><strong>Tổng giá trị:</strong></td>
   <td align="right"><strong> $${order.totalPrice.toFixed(2)}</strong></td>
   </tr>
   <tr>
-  <td colspan="2">Payment Method:</td>
+  <td colspan="2">Phương thức thanh toán:</td>
   <td align="right">${order.paymentMethod}</td>
   </tr>
   </table>
-  <h2>Shipping address</h2>
+  <h2>Địa chỉ giao hàng</h2>
   <p>
   ${order.shippingAddress.fullName},<br/>
   ${order.shippingAddress.address},<br/>
@@ -100,7 +102,7 @@ export const payOrderEmailTemplate = (order) => {
   </p>
   <hr/>
   <p>
-  Thanks for shopping with us.
+  Một lần nữa BonPas Bakery cảm ơn quý khách!
   </p>
   `;
 };

@@ -141,9 +141,9 @@ orderRouter.put(
         .messages()
         .send(
           {
-            from: 'Amazona <amazona@mg.yourdomain.com>',
+            from: 'BonPas Bakery <sales@bonpasbakery.com>',
             to: `${order.user.name} <${order.user.email}>`,
-            subject: `New order ${order._id}`,
+            subject: `Đơn hàng mới ${order._id}`,
             html: payOrderEmailTemplate(order),
           },
           (error, body) => {

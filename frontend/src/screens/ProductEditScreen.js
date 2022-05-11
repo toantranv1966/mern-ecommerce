@@ -150,9 +150,9 @@ export default function ProductEditScreen() {
   return (
     <Container className="small-container">
       <Helmet>
-        <title>Edit Product ${productId}</title>
+        <title>Cập nhật sản phẩm ${productId}</title>
       </Helmet>
-      <h1>Edit Product {productId}</h1>
+      <h1>Cập nhật sản phẩm {productId}</h1>
 
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -161,7 +161,7 @@ export default function ProductEditScreen() {
       ) : (
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="name">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Tên sản phẩm</Form.Label>
             <Form.Control
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -177,7 +177,7 @@ export default function ProductEditScreen() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="name">
-            <Form.Label>Price</Form.Label>
+            <Form.Label>Đơn giá</Form.Label>
             <Form.Control
               value={price}
               onChange={(e) => setPrice(e.target.value)}
@@ -222,7 +222,7 @@ export default function ProductEditScreen() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="category">
-            <Form.Label>Category</Form.Label>
+            <Form.Label>Danh mục</Form.Label>
             <Form.Control
               value={category}
               onChange={(e) => setCategory(e.target.value)}
@@ -238,7 +238,7 @@ export default function ProductEditScreen() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="countInStock">
-            <Form.Label>Count In Stock</Form.Label>
+            <Form.Label>Tồn kho</Form.Label>
             <Form.Control
               value={countInStock}
               onChange={(e) => setCountInStock(e.target.value)}
@@ -246,7 +246,7 @@ export default function ProductEditScreen() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="description">
-            <Form.Label>Description</Form.Label>
+            <Form.Label>Mô tả</Form.Label>
             <Form.Control
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -254,7 +254,7 @@ export default function ProductEditScreen() {
             />
           </Form.Group>
           <div className="mb-3">
-            <Button type="submit">Update</Button>
+            <Button type="submit">Cập nhật</Button>
           </div>
         </Form>
       )}

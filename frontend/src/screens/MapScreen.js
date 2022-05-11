@@ -117,7 +117,7 @@ export default function MapScreen() {
             <div className="map-input-box">
               <input type="text" placeholder="Enter your address"></input>
               <Button type="button" onClick={onConfirm}>
-                Confirm
+                Xác nhận
               </Button>
             </div>
           </StandaloneSearchBox>
