@@ -36,27 +36,8 @@ import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Footer from './components/Footer/index';
-import { css } from '@emotion/react';
-import PropagateLoader from 'react-spinners/PropagateLoader';
-import './App.css';
 
 function App() {
-  // Hiệu ứng
-  const [loading, setLoading] = useState(false);
-  const override = css`
-    display: block;
-    border-color: red;
-    margin-top: 20%;
-  `;
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-
-  // end
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { fullbox, cart, userInfo } = state;
   const signoutHandler = () => {
@@ -80,241 +61,217 @@ function App() {
     fetchCategories();
   }, []);
   return (
-    <div className="App">
-      {loading ? (
-        <PropagateLoader
-          color={'#3d2514'}
-          loading={loading}
-          css={override}
-          size={40}
-        />
-      ) : (
-        <>
-          <BrowserRouter>
-            <div
-              className={
-                sidebarIsOpen
-                  ? fullbox
-                    ? 'site-container active-cont d-flex flex-column full-box'
-                    : 'site-container active-cont d-flex flex-column'
-                  : fullbox
-                  ? 'site-container d-flex flex-column full-box'
-                  : 'site-container d-flex flex-column'
-              }
-            >
-              <ToastContainer position="bottom-center" limit={1} />
-              <header>
-                <Navbar bg="dark" variant="dark" expand="lg">
-                  <Container>
-                    <Button
-                      variant="dark"
-                      onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
-                    >
-                      <i className="fas fa-bars"></i>
-                    </Button>
-                    <LinkContainer to="/">
-                      <Navbar.Brand>BonPas Bakery</Navbar.Brand>
-                    </LinkContainer>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                      <SearchBox />
-                      <Nav className="me-auto  w-100  justify-content-end">
-                        <Link to="/cart" className="nav-link">
-                          Giỏ hàng
-                          {cart.cartItems.length > 0 && (
-                            <Badge pill bg="danger">
-                              {cart.cartItems.reduce(
-                                (a, c) => a + c.quantity,
-                                0
-                              )}
-                            </Badge>
-                          )}
-                        </Link>
-                        {userInfo ? (
-                          <NavDropdown
-                            title={userInfo.name}
-                            id="basic-nav-dropdown"
-                          >
-                            <LinkContainer to="/profile">
-                              <NavDropdown.Item>
-                                Thông tin người dùng
-                              </NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/orderhistory">
-                              <NavDropdown.Item>
-                                Lịch sử mua hàng
-                              </NavDropdown.Item>
-                            </LinkContainer>
-                            <NavDropdown.Divider />
-                            <Link
-                              className="dropdown-item"
-                              to="#signout"
-                              onClick={signoutHandler}
-                            >
-                              Đăng xuất
-                            </Link>
-                          </NavDropdown>
-                        ) : (
-                          <Link className="nav-link" to="/signin">
-                            Đăng nhập
-                          </Link>
-                        )}
-                        {userInfo && userInfo.isAdmin && (
-                          <NavDropdown title="Admin" id="admin-nav-dropdown">
-                            <LinkContainer to="/admin/dashboard">
-                              <NavDropdown.Item>Dashboard</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/admin/products">
-                              <NavDropdown.Item>Sản phẩm</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/admin/orders">
-                              <NavDropdown.Item>Đơn hàng</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/admin/users">
-                              <NavDropdown.Item>Người dùng</NavDropdown.Item>
-                            </LinkContainer>
-                          </NavDropdown>
-                        )}
-                      </Nav>
-                    </Navbar.Collapse>
-                  </Container>
-                </Navbar>
-              </header>
-              <div
-                className={
-                  sidebarIsOpen
-                    ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
-                    : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
-                }
+    <BrowserRouter>
+      <div
+        className={
+          sidebarIsOpen
+            ? fullbox
+              ? 'site-container active-cont d-flex flex-column full-box'
+              : 'site-container active-cont d-flex flex-column'
+            : fullbox
+            ? 'site-container d-flex flex-column full-box'
+            : 'site-container d-flex flex-column'
+        }
+      >
+        <ToastContainer position="bottom-center" limit={1} />
+        <header>
+          <Navbar bg="dark" variant="dark" expand="lg">
+            <Container>
+              <Button
+                variant="dark"
+                onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
-                <Nav className="flex-column text-white w-100 p-2">
-                  <Nav.Item>
-                    <strong>Danh mục</strong>
-                  </Nav.Item>
-                  {categories.map((category) => (
-                    <Nav.Item key={category}>
-                      <LinkContainer
-                        to={`/search?category=${category}`}
-                        onClick={() => setSidebarIsOpen(false)}
-                      >
-                        <Nav.Link>{category}</Nav.Link>
+                <i className="fas fa-bars"></i>
+              </Button>
+              <LinkContainer to="/">
+                <Navbar.Brand>BonPas Bakery</Navbar.Brand>
+              </LinkContainer>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <SearchBox />
+                <Nav className="me-auto  w-100  justify-content-end">
+                  <Link to="/cart" className="nav-link">
+                    Giỏ hàng
+                    {cart.cartItems.length > 0 && (
+                      <Badge pill bg="danger">
+                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                      </Badge>
+                    )}
+                  </Link>
+                  {userInfo ? (
+                    <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                      <LinkContainer to="/profile">
+                        <NavDropdown.Item>
+                          Thông tin người dùng
+                        </NavDropdown.Item>
                       </LinkContainer>
-                    </Nav.Item>
-                  ))}
+                      <LinkContainer to="/orderhistory">
+                        <NavDropdown.Item>Lịch sử mua hàng</NavDropdown.Item>
+                      </LinkContainer>
+                      <NavDropdown.Divider />
+                      <Link
+                        className="dropdown-item"
+                        to="#signout"
+                        onClick={signoutHandler}
+                      >
+                        Đăng xuất
+                      </Link>
+                    </NavDropdown>
+                  ) : (
+                    <Link className="nav-link" to="/signin">
+                      Đăng nhập
+                    </Link>
+                  )}
+                  {userInfo && userInfo.isAdmin && (
+                    <NavDropdown title="Admin" id="admin-nav-dropdown">
+                      <LinkContainer to="/admin/dashboard">
+                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/products">
+                        <NavDropdown.Item>Sản phẩm</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/orders">
+                        <NavDropdown.Item>Đơn hàng</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/users">
+                        <NavDropdown.Item>Người dùng</NavDropdown.Item>
+                      </LinkContainer>
+                    </NavDropdown>
+                  )}
                 </Nav>
-              </div>
-              <main>
-                <Container className="mt-3">
-                  <Routes>
-                    <Route path="/product/:slug" element={<ProductScreen />} />
-                    <Route path="/cart" element={<CartScreen />} />
-                    <Route path="/search" element={<SearchScreen />} />
-                    <Route path="/signin" element={<SigninScreen />} />
-                    <Route path="/signup" element={<SignupScreen />} />
-                    <Route
-                      path="/profile"
-                      element={
-                        <ProtectedRoute>
-                          <ProfileScreen />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route
-                      path="/map"
-                      element={
-                        <ProtectedRoute>
-                          <MapScreen />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route path="/placeorder" element={<PlaceOrderScreen />} />
-                    <Route
-                      path="/order/:id"
-                      element={
-                        <ProtectedRoute>
-                          <OrderScreen />
-                        </ProtectedRoute>
-                      }
-                    ></Route>
-                    <Route
-                      path="/orderhistory"
-                      element={
-                        <ProtectedRoute>
-                          <OrderHistoryScreen />
-                        </ProtectedRoute>
-                      }
-                    ></Route>
-                    <Route
-                      path="/shipping"
-                      element={<ShippingAddressScreen />}
-                    ></Route>
-                    <Route
-                      path="/payment"
-                      element={<PaymentMethodScreen />}
-                    ></Route>
-                    {/* Admin Routes */}
-                    <Route
-                      path="/admin/dashboard"
-                      element={
-                        <AdminRoute>
-                          <DashboardScreen />
-                        </AdminRoute>
-                      }
-                    ></Route>
-                    <Route
-                      path="/admin/orders"
-                      element={
-                        <AdminRoute>
-                          <OrderListScreen />
-                        </AdminRoute>
-                      }
-                    ></Route>
-                    <Route
-                      path="/admin/users"
-                      element={
-                        <AdminRoute>
-                          <UserListScreen />
-                        </AdminRoute>
-                      }
-                    ></Route>
-                    <Route
-                      path="/admin/products"
-                      element={
-                        <AdminRoute>
-                          <ProductListScreen />
-                        </AdminRoute>
-                      }
-                    ></Route>
-                    <Route
-                      path="/admin/product/:id"
-                      element={
-                        <AdminRoute>
-                          <ProductEditScreen />
-                        </AdminRoute>
-                      }
-                    ></Route>
-                    <Route
-                      path="/admin/user/:id"
-                      element={
-                        <AdminRoute>
-                          <UserEditScreen />
-                        </AdminRoute>
-                      }
-                    ></Route>
-                    <Route path="/" element={<HomeScreen />} />
-                  </Routes>
-                </Container>
-              </main>
-              <MessengerCustomerChat
-                pageId="1444607315772142"
-                appId="233106164568098"
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </header>
+        <div
+          className={
+            sidebarIsOpen
+              ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
+              : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
+          }
+        >
+          <Nav className="flex-column text-white w-100 p-2">
+            <Nav.Item>
+              <strong>Danh mục</strong>
+            </Nav.Item>
+            {categories.map((category) => (
+              <Nav.Item key={category}>
+                <LinkContainer
+                  to={`/search?category=${category}`}
+                  onClick={() => setSidebarIsOpen(false)}
+                >
+                  <Nav.Link>{category}</Nav.Link>
+                </LinkContainer>
+              </Nav.Item>
+            ))}
+          </Nav>
+        </div>
+        <main>
+          <Container className="mt-3">
+            <Routes>
+              <Route path="/product/:slug" element={<ProductScreen />} />
+              <Route path="/cart" element={<CartScreen />} />
+              <Route path="/search" element={<SearchScreen />} />
+              <Route path="/signin" element={<SigninScreen />} />
+              <Route path="/signup" element={<SignupScreen />} />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <ProfileScreen />
+                  </ProtectedRoute>
+                }
               />
-              <Footer />
-            </div>
-          </BrowserRouter>
-        </>
-      )}
-    </div>
+              <Route
+                path="/map"
+                element={
+                  <ProtectedRoute>
+                    <MapScreen />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/placeorder" element={<PlaceOrderScreen />} />
+              <Route
+                path="/order/:id"
+                element={
+                  <ProtectedRoute>
+                    <OrderScreen />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path="/orderhistory"
+                element={
+                  <ProtectedRoute>
+                    <OrderHistoryScreen />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path="/shipping"
+                element={<ShippingAddressScreen />}
+              ></Route>
+              <Route path="/payment" element={<PaymentMethodScreen />}></Route>
+              {/* Admin Routes */}
+              <Route
+                path="/admin/dashboard"
+                element={
+                  <AdminRoute>
+                    <DashboardScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/orders"
+                element={
+                  <AdminRoute>
+                    <OrderListScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/users"
+                element={
+                  <AdminRoute>
+                    <UserListScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/products"
+                element={
+                  <AdminRoute>
+                    <ProductListScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/product/:id"
+                element={
+                  <AdminRoute>
+                    <ProductEditScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/user/:id"
+                element={
+                  <AdminRoute>
+                    <UserEditScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route path="/" element={<HomeScreen />} />
+            </Routes>
+          </Container>
+        </main>
+        <MessengerCustomerChat
+          pageId="1444607315772142"
+          appId="233106164568098"
+        />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 export default App;
