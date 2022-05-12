@@ -245,7 +245,7 @@ function ProductScreen() {
               </Form.Group>
               <FloatingLabel
                 controlId="floatingTextarea"
-                label="Comments"
+                label="Đánh giá"
                 className="mb-3"
               >
                 <Form.Control
@@ -258,7 +258,7 @@ function ProductScreen() {
 
               <div className="mb-3">
                 <Button disabled={loadingCreateReview} type="submit">
-                  Submit
+                  Đánh giá
                 </Button>
                 {loadingCreateReview && <LoadingBox></LoadingBox>}
               </div>

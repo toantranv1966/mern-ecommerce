@@ -203,8 +203,8 @@ export default function OrderScreen() {
               <Card.Text>
                 <strong>Tên:</strong> {order.shippingAddress.fullName} <br />
                 <strong>Địa chỉ: </strong> {order.shippingAddress.address},
-                {order.shippingAddress.city}, {order.shippingAddress.postalCode}
-                ,{order.shippingAddress.country}
+                {order.shippingAddress.city},{order.shippingAddress.postalCode},
+                {order.shippingAddress.country}
                 &nbsp;
                 {order.shippingAddress.location &&
                   order.shippingAddress.location.lat && (

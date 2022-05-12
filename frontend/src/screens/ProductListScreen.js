@@ -104,7 +104,7 @@ export default function ProductListScreen() {
             headers: { Authorization: `Bearer ${userInfo.token}` },
           }
         );
-        toast.success('product create successfully');
+        toast.success('Đã tạo sản phẩm thành công');
         dispatch({ type: 'CREATE_SUCCESS' });
         navigate(`/admin/product/${data.product._id}`);
       } catch (err) {
@@ -117,13 +117,13 @@ export default function ProductListScreen() {
   };
 
   const deleteHandler = async (product) => {
-    if (window.confirm('Are you sure to delete?')) {
+    if (window.confirm('Bạn có chắc muốn xóa sản phẩm?')) {
       try {
         dispatch({ type: 'DELETE_RESQUEST' });
         const { data } = await axios.delete(`/api/products/${product._id}`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
-        toast.success('product deleted successfully');
+        toast.success('Đã xóa sản phẩm thành công.');
         dispatch({ type: 'DELETE_SUCCESS' });
       } catch (err) {
         toast.error(getError(error));

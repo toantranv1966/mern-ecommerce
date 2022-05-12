@@ -36,16 +36,16 @@ const reducer = (state, action) => {
 
 const prices = [
   {
-    name: '$1 to $50',
-    value: '1-50',
+    name: '$8000 to $49000',
+    value: '8000-49000',
   },
   {
-    name: '$51 to $200',
-    value: '51-200',
+    name: '$50000 to $99000',
+    value: '50000-99000',
   },
   {
-    name: '$201 to $1000',
-    value: '201-1000',
+    name: '$100000 to $199000',
+    value: '100000-199000',
   },
 ];
 
@@ -241,7 +241,7 @@ export default function SearchScreen() {
                     }}
                   >
                     <option value="newest">Sản phẩm mới</option>
-                    <option value="lowest">Giá: Thấp đến caption</option>
+                    <option value="lowest">Giá: Thấp đến cao</option>
                     <option value="highest">Giá: Cao đến thấp</option>
                     <option value="toprated">Đánh giá</option>
                   </select>

@@ -148,13 +148,13 @@ export default function PlaceOrderScreen() {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Vận chuyển</Col>
+                    <Col>Phí vận chuyển</Col>
                     <Col>${cart.shippingPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Tax</Col>
+                    <Col>Thuế</Col>
                     <Col>${cart.taxPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>

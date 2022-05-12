@@ -50,7 +50,7 @@ function HomeScreen() {
     <div>
       <SliderScreen />
       <Helmet>
-        <title>Cloud Bakery</title>
+        <title>BonPas Bakery</title>
       </Helmet>
       <h1>Hôm Nay Ăn Gì?</h1>
       <div className="products">

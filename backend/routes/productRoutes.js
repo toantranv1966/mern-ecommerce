@@ -16,16 +16,16 @@ productRouter.post(
   isAdmin,
   expressAsyncHandler(async (req, res) => {
     const newProduct = new Product({
-      name: 'sample name' + Date.now(),
-      slug: 'sample-name-' + Date.now(),
+      name: '' + Date.now(),
+      slug: '' + Date.now(),
       image: '/image/p1.jpg',
       price: 0,
-      category: 'sample category',
-      brand: 'sample brand',
+      category: 'Danh mục',
+      brand: 'BonPas',
       countInStock: 0,
       rating: 0,
       numReviews: 0,
-      description: 'sample description',
+      description: 'Mô tả',
     });
     const product = await newProduct.save();
     res.send({ message: 'Product Create', product });

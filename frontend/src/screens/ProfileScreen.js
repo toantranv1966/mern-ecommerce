@@ -52,7 +52,7 @@ export default function ProfileScreen() {
       });
       ctxDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
-      toast.success('User updated successfully');
+      toast.success('Cập nhật người dùng thành công');
     } catch (err) {
       dispatch({
         type: 'FETCH_FAIL',
