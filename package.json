@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/toantranv1966/mern-ecommerce/issues"
   },
-  "homepage": "https://github.com/toantranv1966/mern-ecommerce#readme"
+  "homepage": "https://github.com/toantranv1966/mern-ecommerce#readme",
+  "dependencies": {
+    "react-scroll": "^1.8.7"
+  }
 }
