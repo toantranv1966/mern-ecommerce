@@ -305,6 +305,8 @@
     2. get images in edit screen
     3. show images in product screen
 
+// Phát triển & chỉnh sửa website (7/5/2022)
+
 54. React-messenger-customer-chat (06h00 7/5/2022)
 
     1. npm install --force react-messenger-customer-chat

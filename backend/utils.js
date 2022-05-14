@@ -47,7 +47,7 @@ export const mailgun = () =>
   });
 
 export const payOrderEmailTemplate = (order) => {
-  return `<h1>Cảm ơn quý khách đã đặt hàng tại BonPas Bakery,</h1>
+  return `<h1>Cảm ơn quý khách đã đặt hàng tại Cloud Bakery,</h1>
   <p>
   Chào ${order.user.name} thân mến,</p>
   <p>Chúng tôi đã xử lý xong đơn đặt hàng của bạn.</p>
@@ -102,7 +102,7 @@ export const payOrderEmailTemplate = (order) => {
   </p>
   <hr/>
   <p>
-  Một lần nữa BonPas Bakery cảm ơn quý khách!
+  Một lần nữa Cloud Bakery cảm ơn quý khách!
   </p>
   `;
 };
