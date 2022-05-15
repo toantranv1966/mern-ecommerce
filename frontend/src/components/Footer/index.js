@@ -24,7 +24,7 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">Cloud Bakery</SocialLogo>
+            <SocialLogo to="/">BonPas Bakery</SocialLogo>
             <Hotline>Hotline Đặt hàng</Hotline>
             <SocialLogo11 to="/">
               Vinh Phat IT Co., Ltd All rights reserved
