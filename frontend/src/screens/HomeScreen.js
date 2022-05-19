@@ -10,6 +10,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import SliderScreen from './SliderScreen';
 // import data from '../data';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -47,7 +48,7 @@ function HomeScreen() {
   }, []);
 
   return (
-    <div>
+    <div className="fix-botton">
       <SliderScreen />
       <Helmet>
         <title>BonPas Bakery</title>

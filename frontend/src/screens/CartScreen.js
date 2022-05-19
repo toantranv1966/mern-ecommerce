@@ -10,6 +10,7 @@ import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // import Product from '../components/Product';
+import '../App.css';
 
 export default function CartScreen() {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ export default function CartScreen() {
   };
 
   return (
-    <div>
+    <div className="fix-botton">
       <Helmet>
         <title>Giỏ hàng của bạn</title>
       </Helmet>
@@ -48,7 +49,7 @@ export default function CartScreen() {
         <Col md={8}>
           {cartItems.length === 0 ? (
             <MessageBox>
-              Giỏ hàng trống. <Link to="/">Đi mua hàng</Link>
+              Giỏ hàng trống. <Link to="/">Tiếp tục mua hàng</Link>
             </MessageBox>
           ) : (
             <ListGroup>

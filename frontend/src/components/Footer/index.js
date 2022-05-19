@@ -17,6 +17,10 @@ import {
   SocialLogo11,
   Hotline,
 } from './FooterElements';
+import { LinkContainer } from 'react-router-bootstrap';
+import '../../App.css';
+import logo from '../../components/Header/logobp.png';
+import Navbar from 'react-bootstrap/Navbar';
 
 const Footer = () => {
   return (
@@ -24,7 +28,18 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">BonPas Bakery</SocialLogo>
+            <LinkContainer to="/">
+              <Navbar.Brand>
+                <img
+                  src={logo}
+                  width="auto"
+                  height="auto"
+                  className="d-inline-block align-top py-2"
+                  alt="React Bootstrap logo"
+                />
+              </Navbar.Brand>
+            </LinkContainer>
+            {/* <SocialLogo to="/">BonPas Bakery</SocialLogo> */}
             <Hotline>Hotline Đặt hàng</Hotline>
             <SocialLogo11 to="/">
               Vinh Phat IT Co., Ltd All rights reserved

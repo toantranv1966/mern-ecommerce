@@ -36,6 +36,8 @@ import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Footer from './components/Footer/index';
+import logo from './components/Header/logobp.png';
+import './App.css';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -75,69 +77,103 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar fixed="top" bg="light" variant="light" expand="lg">
             <Container>
               <Button
-                variant="dark"
+                variant="light"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
                 <i className="fas fa-bars"></i>
               </Button>
               <LinkContainer to="/">
-                <Navbar.Brand>BonPas Bakery</Navbar.Brand>
+                <Navbar.Brand>
+                  <img
+                    src={logo}
+                    width="auto"
+                    height="auto"
+                    className="d-inline-block align-top py-2"
+                    alt="React Bootstrap logo"
+                  />
+                </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
-                <Nav className="me-auto  w-100  justify-content-end">
-                  <Link to="/cart" className="nav-link">
-                    Giỏ hàng
-                    {cart.cartItems.length > 0 && (
-                      <Badge pill bg="danger">
-                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                      </Badge>
-                    )}
-                  </Link>
-                  {userInfo ? (
-                    <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                      <LinkContainer to="/profile">
-                        <NavDropdown.Item>
-                          Thông tin người dùng
-                        </NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/orderhistory">
-                        <NavDropdown.Item>Lịch sử mua hàng</NavDropdown.Item>
-                      </LinkContainer>
-                      <NavDropdown.Divider />
-                      <Link
-                        className="dropdown-item"
-                        to="#signout"
-                        onClick={signoutHandler}
-                      >
-                        Đăng xuất
+
+                <Nav className="justify-content-center flex-grow-1 pe-3">
+                  <Nav.Link className="text-bold" href="#action2">
+                    GIỚI THIỆU
+                  </Nav.Link>
+                  <Nav.Link className="text-bold" href="#action3">
+                    MÃ VOUCHER
+                  </Nav.Link>
+                  <Nav.Link className="text-bold" href="#action4">
+                    KHUYẾN MÃI
+                  </Nav.Link>
+                  <Nav.Link className="text-bold" href="#action5">
+                    LIÊN HỆ
+                  </Nav.Link>
+                </Nav>
+
+                <Nav className="me-auto justify-content-end">
+                  {/* icon fa */}
+
+                  <div className="icon f_flex width">
+                    <div className="cart">
+                      <Link to="/cart">
+                        <i className="fa fa-shopping-bag icon-circle"></i>
+                        {cart.cartItems.length > 0 && (
+                          <span pill bg="danger">
+                            {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                          </span>
+                        )}
                       </Link>
-                    </NavDropdown>
-                  ) : (
-                    <Link className="nav-link" to="/signin">
-                      Đăng nhập
-                    </Link>
-                  )}
-                  {userInfo && userInfo.isAdmin && (
-                    <NavDropdown title="Admin" id="admin-nav-dropdown">
-                      <LinkContainer to="/admin/dashboard">
-                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/admin/products">
-                        <NavDropdown.Item>Sản phẩm</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/admin/orders">
-                        <NavDropdown.Item>Đơn hàng</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/admin/users">
-                        <NavDropdown.Item>Người dùng</NavDropdown.Item>
-                      </LinkContainer>
-                    </NavDropdown>
-                  )}
+                    </div>
+                    <i className="fa fa-user icon-circle"></i>
+                    {userInfo ? (
+                      <NavDropdown
+                        title={userInfo.name}
+                        id="basic-nav-dropdown"
+                      >
+                        <LinkContainer to="/profile">
+                          <NavDropdown.Item>
+                            Thông tin người dùng
+                          </NavDropdown.Item>
+                        </LinkContainer>
+                        <LinkContainer to="/orderhistory">
+                          <NavDropdown.Item>Lịch sử mua hàng</NavDropdown.Item>
+                        </LinkContainer>
+                        <NavDropdown.Divider />
+                        <Link
+                          className="dropdown-item"
+                          to="#signout"
+                          onClick={signoutHandler}
+                        >
+                          Đăng xuất
+                        </Link>
+                      </NavDropdown>
+                    ) : (
+                      <Link className="nav-link" to="/signin">
+                        Đăng nhập
+                      </Link>
+                    )}
+                    {userInfo && userInfo.isAdmin && (
+                      <NavDropdown title="Admin" id="admin-nav-dropdown">
+                        <LinkContainer to="/admin/dashboard">
+                          <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                        </LinkContainer>
+                        <LinkContainer to="/admin/products">
+                          <NavDropdown.Item>Sản phẩm</NavDropdown.Item>
+                        </LinkContainer>
+                        <LinkContainer to="/admin/orders">
+                          <NavDropdown.Item>Đơn hàng</NavDropdown.Item>
+                        </LinkContainer>
+                        <LinkContainer to="/admin/users">
+                          <NavDropdown.Item>Người dùng</NavDropdown.Item>
+                        </LinkContainer>
+                      </NavDropdown>
+                    )}
+                  </div>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -150,7 +186,7 @@ function App() {
               : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
           }
         >
-          <Nav className="flex-column text-white w-100 p-2">
+          <Nav className="flex-column text-muted w-100 p-2">
             <Nav.Item>
               <strong>Danh mục</strong>
             </Nav.Item>
@@ -160,7 +196,7 @@ function App() {
                   to={`/search?category=${category}`}
                   onClick={() => setSidebarIsOpen(false)}
                 >
-                  <Nav.Link>{category}</Nav.Link>
+                  <Nav.Link className="text-muted">{category}</Nav.Link>
                 </LinkContainer>
               </Nav.Item>
             ))}

@@ -7,6 +7,7 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import Button from 'react-bootstrap/Button';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -49,7 +50,7 @@ export default function OrderHistoryScreen() {
   }, [userInfo]);
 
   return (
-    <div>
+    <div className="fix-botton">
       <Helmet>
         <title>Lịch sử mua hàng</title>
       </Helmet>

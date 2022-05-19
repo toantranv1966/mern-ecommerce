@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { Store } from '../Store';
 import CheckoutSteps from '../components/CheckoutSteps';
+import '../App.css';
 
 export default function ShippingAddressScreen() {
   const navigate = useNavigate();
@@ -57,7 +58,7 @@ export default function ShippingAddressScreen() {
     ctxDispatch({ type: 'SET_FULLBOX_OFF' });
   }, [ctxDispatch, fullBox]);
   return (
-    <div>
+    <div className="fix-botton">
       <Helmet>
         <title>Địa chỉ giao hàng</title>
       </Helmet>

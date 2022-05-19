@@ -12,6 +12,7 @@ import CheckoutSteps from '../components/CheckoutSteps';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
 import LoadingBox from '../components/LoadingBox';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -79,7 +80,7 @@ export default function PlaceOrderScreen() {
     }
   }, [cart, navigate]);
   return (
-    <div>
+    <div className="fix-botton">
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <Helmet>
         <title>Đơn hàng</title>
@@ -161,7 +162,7 @@ export default function PlaceOrderScreen() {
                 <ListGroup.Item>
                   <Row>
                     <Col>
-                      <strong> Tổng đơn hàng</strong>
+                      <strong> Tổng cộng</strong>
                     </Col>
                     <Col>
                       <strong>${cart.totalPrice.toFixed(2)}</strong>

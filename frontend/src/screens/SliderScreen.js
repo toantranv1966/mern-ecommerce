@@ -15,8 +15,8 @@ export default function SliderScreen() {
               alt="First slide"
             />
             <Carousel.Caption>
-              <Button href="#" variant="danger" size="lg">
-                Order Now
+              <Button href="#" variant="outline-primary" size="lg">
+                Đặt hàng
               </Button>
             </Carousel.Caption>
           </Carousel.Item>
@@ -28,8 +28,8 @@ export default function SliderScreen() {
             />
 
             <Carousel.Caption>
-              <Button variant="danger" size="lg">
-                Order Now
+              <Button variant="outline-primary" size="lg">
+                Đặt hàng
               </Button>
             </Carousel.Caption>
           </Carousel.Item>
@@ -41,8 +41,8 @@ export default function SliderScreen() {
             />
 
             <Carousel.Caption>
-              <Button variant="danger" size="lg">
-                Order Now
+              <Button variant="outline-primary" size="lg">
+                Đặt hàng
               </Button>
             </Carousel.Caption>
           </Carousel.Item>
@@ -54,8 +54,8 @@ export default function SliderScreen() {
             />
 
             <Carousel.Caption>
-              <Button variant="danger" size="lg">
-                Order Now
+              <Button variant="outline-primary" size="lg">
+                Đặt hàng
               </Button>
             </Carousel.Caption>
           </Carousel.Item>
@@ -67,8 +67,8 @@ export default function SliderScreen() {
             />
 
             <Carousel.Caption>
-              <Button variant="danger" size="lg">
-                Order Now
+              <Button variant="outline-primary" size="lg">
+                Đặt hàng
               </Button>
             </Carousel.Caption>
           </Carousel.Item>
@@ -80,8 +80,8 @@ export default function SliderScreen() {
             />
 
             <Carousel.Caption>
-              <Button variant="danger" size="lg">
-                Order Now
+              <Button variant="outline-primary" size="lg">
+                Đặt hàng
               </Button>
             </Carousel.Caption>
           </Carousel.Item>

@@ -141,9 +141,9 @@ orderRouter.put(
         .messages()
         .send(
           {
-            from: 'Cloud Bakery <sales@bonpasbakery.com>',
+            from: 'BonPas Bakery <sales@bonpasbakery.com>',
             to: `${order.user.name} <${order.user.email}>`,
-            subject: `Đơn hàng mới ${order._id}`,
+            subject: `BonPas Bakery đã nhận đơn hàng ${order._id}`,
             html: payOrderEmailTemplate(order),
           },
           (error, body) => {

@@ -12,6 +12,7 @@ import MessageBox from '../components/MessageBox';
 import Button from 'react-bootstrap/Button';
 import Product from '../components/Product';
 import LinkContainer from 'react-router-bootstrap/LinkContainer';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -128,7 +129,7 @@ export default function SearchScreen() {
     return `/search?category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
   };
   return (
-    <div>
+    <div className="fix-botton">
       <Helmet>
         <title>Tìm kiếm sản phẩm</title>
       </Helmet>
@@ -139,7 +140,9 @@ export default function SearchScreen() {
             <ul>
               <li>
                 <Link
-                  className={'all' === category ? 'text-bold' : ''}
+                  className={
+                    'all' === category ? 'text-bold text-muted' : 'text-muted'
+                  }
                   to={getFilterUrl({ category: 'all' })}
                 >
                   Tất cả
@@ -148,7 +151,9 @@ export default function SearchScreen() {
               {categories.map((c) => (
                 <li key={c}>
                   <Link
-                    className={c === category ? 'text-bold' : ''}
+                    className={
+                      c === category ? 'text-bold text-muted' : 'text-muted'
+                    }
                     to={getFilterUrl({ category: c })}
                   >
                     {c}
@@ -162,7 +167,9 @@ export default function SearchScreen() {
             <ul>
               <li>
                 <Link
-                  className={'all' === price ? 'text-bold' : ''}
+                  className={
+                    'all' === price ? 'text-bold text-muted' : 'text-muted'
+                  }
                   to={getFilterUrl({ price: 'all' })}
                 >
                   Tất cả
@@ -172,7 +179,9 @@ export default function SearchScreen() {
                 <li key={p.value}>
                   <Link
                     to={getFilterUrl({ price: p.value })}
-                    className={p.value === price ? 'text-bold' : ''}
+                    className={
+                      p.value === price ? 'text-bold text-muted' : 'text-muted'
+                    }
                   >
                     {p.name}
                   </Link>
@@ -187,7 +196,11 @@ export default function SearchScreen() {
                 <li key={r.name}>
                   <Link
                     to={getFilterUrl({ rating: r.rating })}
-                    className={`${r.rating}` === `${rating}` ? 'text-bold' : ''}
+                    className={
+                      `${r.rating}` === `${rating}`
+                        ? 'text-bold text-muted'
+                        : ''
+                    }
                   >
                     <Rating caption={' & up'} rating={r.rating}></Rating>
                   </Link>
@@ -196,7 +209,7 @@ export default function SearchScreen() {
               <li>
                 <Link
                   to={getFilterUrl({ rating: 'all' })}
-                  className={rating === 'all' ? 'text-bold' : ''}
+                  className={rating === 'all' ? 'text-bold text-muted' : ''}
                 >
                   <Rating caption={' & up'} rating={0}></Rating>
                 </Link>

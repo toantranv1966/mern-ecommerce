@@ -6,6 +6,7 @@ import { Store } from '../Store';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
 import axios from 'axios';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -62,7 +63,7 @@ export default function ProfileScreen() {
   };
 
   return (
-    <div className="container small-container">
+    <div className="container small-container fix-botton">
       <Helmet>
         <title>Thông tin người dùng</title>
       </Helmet>

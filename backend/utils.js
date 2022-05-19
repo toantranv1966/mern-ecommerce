@@ -47,10 +47,10 @@ export const mailgun = () =>
   });
 
 export const payOrderEmailTemplate = (order) => {
-  return `<h1>Cảm ơn quý khách đã đặt hàng tại BonPas Bakery,</h1>
+  return `<h1>Cám ơn bạn đã đặt hàng tại BonPas Bakery,</h1>
   <p>
-  Chào ${order.user.name} thân mến,</p>
-  <p>Chúng tôi đã xử lý xong đơn đặt hàng của bạn.</p>
+  Xin chào ${order.user.name}</p>
+  <p>BonPas Bakery đã xử lý xong đơn đặt hàng của bạn.</p>
   <h2>[Thông tin đơn hàng ${order._id}] (${order.createdAt
     .toString()
     .substring(0, 10)})</h2>
@@ -92,7 +92,7 @@ export const payOrderEmailTemplate = (order) => {
   <td align="right">${order.paymentMethod}</td>
   </tr>
   </table>
-  <h2>Địa chỉ giao hàng</h2>
+  <h2>Đơn hàng được giao đến</h2>
   <p>
   ${order.shippingAddress.fullName},<br/>
   ${order.shippingAddress.address},<br/>

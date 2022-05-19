@@ -16,6 +16,7 @@ import { getError } from '../utils';
 import { Store } from '../Store';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import { toast } from 'react-toastify';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -122,7 +123,7 @@ function ProductScreen() {
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
-    <div>
+    <div className="fix-botton">
       <Row>
         <Col md={6}>
           <img

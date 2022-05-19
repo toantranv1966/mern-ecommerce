@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Button from 'react-bootstrap/Button';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -89,7 +90,7 @@ export default function UserEditScreen() {
   };
 
   return (
-    <Container className="small-container">
+    <Container className="small-container fix-botton">
       <Helmet>
         <title>Cập nhật người dùng ${userId}</title>
       </Helmet>

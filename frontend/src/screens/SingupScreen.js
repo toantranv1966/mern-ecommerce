@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Store } from '../Store';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
+import '../App.css';
 
 export default function SignupScreen() {
   const navigate = useNavigate();
@@ -49,52 +50,54 @@ export default function SignupScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container ClassName="small-container">
-      <Helmet>
-        <title>Đăng ký</title>
-      </Helmet>
-      <h1 ClassName="my-3">Đăng ký</h1>
-      <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Tên</Form.Label>
-          <Form.Control
-            type="text"
-            required
-            onChange={(e) => setName(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Mật khẩu</Form.Label>
-          <Form.Control
-            type="password"
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="confirmPassword">
-          <Form.Label>Xác nhận Mật khẩu</Form.Label>
-          <Form.Control
-            type="password"
-            required
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </Form.Group>
-        <div className="mb-3">
-          <Button type="submit">Đăng ký</Button>
-        </div>
-        <div className="mb-3">
-          Bạn đã có tài khoản?{' '}
-          <Link to={`/signin?redirect=${redirect}`}>Đăng nhập</Link>
-        </div>
-      </Form>
-    </Container>
+    <div className="fix-botton">
+      <Container ClassName="small-container fix-botton">
+        <Helmet>
+          <title>Đăng ký</title>
+        </Helmet>
+        <h1 ClassName="my-3">Đăng ký</h1>
+        <Form onSubmit={submitHandler}>
+          <Form.Group className="mb-3" controlId="name">
+            <Form.Label>Tên</Form.Label>
+            <Form.Control
+              type="text"
+              required
+              onChange={(e) => setName(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="password">
+            <Form.Label>Mật khẩu</Form.Label>
+            <Form.Control
+              type="password"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="confirmPassword">
+            <Form.Label>Xác nhận Mật khẩu</Form.Label>
+            <Form.Control
+              type="password"
+              required
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </Form.Group>
+          <div className="mb-3">
+            <Button type="submit">Đăng ký</Button>
+          </div>
+          <div className="mb-3">
+            Bạn đã có tài khoản?{' '}
+            <Link to={`/signin?redirect=${redirect}`}>Đăng nhập</Link>
+          </div>
+        </Form>
+      </Container>
+    </div>
   );
 }

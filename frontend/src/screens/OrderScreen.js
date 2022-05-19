@@ -14,6 +14,7 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
+import '../App.css';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -190,11 +191,12 @@ export default function OrderScreen() {
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
-    <div>
+    <div className="fix-botton">
       <Helmet>
         <title>Đơn hàng {orderId}</title>
       </Helmet>
-      <h1 className="my-3">Đơn hàng {orderId}</h1>
+      <h3>Cảm ơn bạn đã mua hàng</h3>
+      <span className="my-3 text-bold">Mã đơn hàng của bạn {orderId}</span>
       <Row>
         <Col md={8}>
           <Card className="mb-3">
@@ -292,7 +294,7 @@ export default function OrderScreen() {
                 <ListGroup.Item>
                   <Row>
                     <Col>
-                      <strong> Tổng cộng đơn hàng</strong>
+                      <strong> Tổng cộng</strong>
                     </Col>
                     <Col>
                       <strong>${order.totalPrice.toFixed(2)}</strong>
