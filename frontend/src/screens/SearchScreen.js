@@ -227,7 +227,7 @@ export default function SearchScreen() {
               <Row className="justify-content-between mb-3">
                 <Col md={6}>
                   <div>
-                    {countProducts === 0 ? 'No' : countProducts} Results
+                    {countProducts === 0 ? 'No' : countProducts} kết quả
                     {query !== 'all' && ' : ' + query}
                     {category !== 'all' && ' : ' + category}
                     {price !== 'all' && ' : Price ' + price}
@@ -246,7 +246,7 @@ export default function SearchScreen() {
                   </div>
                 </Col>
                 <Col className="text-end">
-                  Sort by{' '}
+                  Sắp xếp theo:{' '}
                   <select
                     value={order}
                     onChange={(e) => {

@@ -35,9 +35,10 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-import Footer from './components/Footer/index';
+import Footer from './components/Footer/Footer';
 import logo from './components/Header/logobp.png';
 import './App.css';
+// import './index.css';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -101,10 +102,10 @@ function App() {
                 <SearchBox />
 
                 <Nav className="justify-content-center flex-grow-1 pe-3">
-                  <Nav.Link className="text-bold" href="#action2">
+                  <Nav.Link className="text-bold fs-6" href="#action2">
                     GIỚI THIỆU
                   </Nav.Link>
-                  <Nav.Link className="text-bold" href="#action3">
+                  <Nav.Link className="text-bold " href="#action3">
                     MÃ VOUCHER
                   </Nav.Link>
                   <Nav.Link className="text-bold" href="#action4">

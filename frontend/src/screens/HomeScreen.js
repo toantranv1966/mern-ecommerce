@@ -11,6 +11,7 @@ import MessageBox from '../components/MessageBox';
 import SliderScreen from './SliderScreen';
 // import data from '../data';
 import '../App.css';
+import Carousel from '../components/Header/Carousel';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -49,11 +50,12 @@ function HomeScreen() {
 
   return (
     <div className="fix-botton">
-      <SliderScreen />
+      {/* <SliderScreen /> */}
+      <Carousel />
       <Helmet>
         <title>BonPas Bakery</title>
       </Helmet>
-      <h1>Hôm Nay Ăn Gì?</h1>
+      <h1 className="text-5xl font-medium mt-3">Hôm Nay Ăn Gì?</h1>
       <div className="products">
         {loading ? (
           <LoadingBox />
