@@ -34,7 +34,7 @@ export default function Carousel() {
         {/* Single item */}
         <div className="carousel-item active relative float-left w-full">
           <img
-            src="./images/SlideCard/s-1.png"
+            src="./images/SlideCard/s-2.png"
             className="block w-full"
             alt="Motorbike Smoke"
           />
@@ -52,7 +52,7 @@ export default function Carousel() {
         {/* Single item */}
         <div className="carousel-item relative float-left w-full">
           <img
-            src="./images/SlideCard/s-2.png"
+            src="./images/SlideCard/s-4.jpg"
             className="block w-full"
             alt="Mountaintop"
           />
@@ -70,7 +70,7 @@ export default function Carousel() {
         {/* Single item */}
         <div className="carousel-item relative float-left w-full">
           <img
-            src="./images/SlideCard/s-3.jpg"
+            src="./images/SlideCard/s-6.jpg"
             className="block w-full"
             alt="Woman Reading a Book"
           />

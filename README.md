@@ -315,3 +315,6 @@
 55. React-Boostrap Carousel (07/05 - 08/05/2022)
 56. Footer Style-Components (09h00 - 14h30 10/05/2022)
 57. Change language (18h00 - 19h00 10/05/2022 ) (14h00 - 15h00 12/05/2022)
+58. Update Footer (21/05/2022 - 22/05/2022)
+
+59. Update Carousel & edit images (09h00 - 11h00 24/05/2022)
