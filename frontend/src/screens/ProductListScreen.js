@@ -9,6 +9,7 @@ import { Store } from '../Store';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -135,7 +136,7 @@ export default function ProductListScreen() {
   };
 
   return (
-    <div>
+    <div className="fix-botton">
       <Row>
         <Col>
           <h1>Danh sách Sản phẩm</h1>
