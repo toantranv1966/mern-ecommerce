@@ -86,11 +86,11 @@ export default function UserListScreen() {
   };
 
   return (
-    <div>
+    <div className="fix-botton">
       <Helmet>
         <title>Danh sách người dùng</title>
       </Helmet>
-      <h1>Danh sách người dùng</h1>
+      <h1 className="text-2xl font-medium mb-3">Danh sách người dùng</h1>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
         <LoadingBox></LoadingBox>

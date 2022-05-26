@@ -20,7 +20,7 @@ productRouter.post(
       slug: '' + Date.now(),
       image: '/image/p1.jpg',
       price: 0,
-      category: 'Danh mục',
+      category: 'Bánh kem sinh nhật',
       brand: 'BonPas',
       countInStock: 0,
       rating: 0,

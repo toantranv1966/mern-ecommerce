@@ -83,11 +83,11 @@ export default function OrderListScreen() {
   };
 
   return (
-    <div>
+    <div className="fix-botton">
       <Helmet>
         <title>Danh sách đơn hàng</title>
       </Helmet>
-      <h1>Danh sách đơn hàng</h1>
+      <h1 className="text-2xl font-medium mb-3">Danh sách đơn hàng</h1>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
         <LoadingBox></LoadingBox>

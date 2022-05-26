@@ -11,6 +11,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Button from 'react-bootstrap/Button';
 import { toast } from 'react-toastify';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -148,11 +149,13 @@ export default function ProductEditScreen() {
   };
 
   return (
-    <Container className="small-container">
+    <div className="fix-botton">
       <Helmet>
         <title>Cập nhật sản phẩm ${productId}</title>
       </Helmet>
-      <h1>Cập nhật sản phẩm {productId}</h1>
+      <h1 className="text-2xl font-medium mb-3">
+        Cập nhật sản phẩm {productId}
+      </h1>
 
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -258,6 +261,6 @@ export default function ProductEditScreen() {
           </div>
         </Form>
       )}
-    </Container>
+    </div>
   );
 }

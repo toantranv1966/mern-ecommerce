@@ -65,7 +65,7 @@ export default function ShippingAddressScreen() {
 
       <CheckoutSteps step1 step2></CheckoutSteps>
       <div className="container small-container">
-        <h1 className="my-3">Địa chỉ giao hàng</h1>
+        <h1 className="text-2xl font-medium mb-3 my-3">Địa chỉ giao hàng</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlID="fullName">
             <Form.Label>Họ tên</Form.Label>

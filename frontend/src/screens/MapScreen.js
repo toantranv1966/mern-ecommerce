@@ -100,7 +100,7 @@ export default function MapScreen() {
   };
 
   return (
-    <div className="full-box">
+    <div className="fix-botton full-box">
       <LoadScript libraries={libs} setGoogleApiKey={googleApiKey}>
         <GoogleMap
           id="smaple-map"
@@ -115,7 +115,7 @@ export default function MapScreen() {
             onPlacesChanged={onPlacesChanged}
           >
             <div className="map-input-box">
-              <input type="text" placeholder="Enter your address"></input>
+              <input type="text" placeholder="Nhập địa chỉ của bạn"></input>
               <Button type="button" onClick={onConfirm}>
                 Xác nhận
               </Button>

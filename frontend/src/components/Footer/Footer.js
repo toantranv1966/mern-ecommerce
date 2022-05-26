@@ -156,7 +156,7 @@ export default function Footer() {
                     <p className="fst-italic">Hotline đặt hàng</p>
                   </p>
                 </h6>
-                <p className="comp-hotline flex items-center justify-center md:justify-start mb-4">
+                <p className="comp-hotline flex items-center justify-center md:justify-start">
                   1800 5555 34
                 </p>
               </div>

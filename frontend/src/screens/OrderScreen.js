@@ -195,13 +195,13 @@ export default function OrderScreen() {
       <Helmet>
         <title>Đơn hàng {orderId}</title>
       </Helmet>
-      <h3>Cảm ơn bạn đã mua hàng</h3>
+      <h3 className="text-2xl font-medium mb-3">Cảm ơn bạn đã mua hàng</h3>
       <span className="my-3 text-bold">Mã đơn hàng của bạn {orderId}</span>
       <Row>
         <Col md={8}>
           <Card className="mb-3">
             <Card.Body>
-              <Card.Title>Vận chuyển</Card.Title>
+              <Card.Title>Địa chỉ giao hàng</Card.Title>
               <Card.Text>
                 <strong>Tên:</strong> {order.shippingAddress.fullName} <br />
                 <strong>Địa chỉ: </strong> {order.shippingAddress.address},

@@ -85,7 +85,7 @@ export default function PlaceOrderScreen() {
       <Helmet>
         <title>Đơn hàng</title>
       </Helmet>
-      <h1 className="my-3">Đơn hàng</h1>
+      <h1 className="text-2xl font-medium mb-3 my-3">Đơn hàng</h1>
       <Row>
         <Col md={8}>
           <Card className="mb-3">

@@ -36,7 +36,9 @@ export default function PaymentMethodScreen() {
         <Helmet>
           <title>Phương thức thanh toán</title>
         </Helmet>
-        <h1 className="my-3">Phương thức thanh toán</h1>
+        <h1 className="text-2xl font-medium mb-3 my-3">
+          Phương thức thanh toán
+        </h1>
         <Form onSubmit={submitHandler}>
           <div className="mb-3">
             <Form.Check

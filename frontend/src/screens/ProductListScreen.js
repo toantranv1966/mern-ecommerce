@@ -139,7 +139,7 @@ export default function ProductListScreen() {
     <div className="fix-botton">
       <Row>
         <Col>
-          <h1>Danh sách Sản phẩm</h1>
+          <h1 className="text-2xl font-medium mb-3">Danh sách Sản phẩm</h1>
         </Col>
         <Col className="col text-end">
           <div>
