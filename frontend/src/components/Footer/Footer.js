@@ -8,7 +8,9 @@ export default function Footer() {
       <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
         <div className="flex justify-center">
           <div className="mr-12 hidden lg:block">
-            <span>Kết nối BonPas Bakery:</span>
+            <span className="font-semibold fst-italic">
+              Kết nối BonPas Bakery:
+            </span>
           </div>
           <a href="#!" className="mr-6 text-gray-600">
             <svg
@@ -184,7 +186,7 @@ export default function Footer() {
           </div>
           <div className>
             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
-              LINK
+              LIÊN KẾT NHANH
             </h6>
             <p className="flex items-center justify-center md:justify-start mb-4">
               <a href="#!" className="text-gray-600">
@@ -264,7 +266,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center p-6 bg-gray-200">
-        <span>© 2022 Copyright:</span>
+        <span>© 2022 Copyright</span>
         <a
           className="text-gray-600 ml-3 font-semibold"
           href="https://vinhphatit.com/"

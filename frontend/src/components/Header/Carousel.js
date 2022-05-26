@@ -47,6 +47,9 @@ export default function Carousel() {
             >
               Đặt hàng
             </Button>
+            <h1 class="text-5xl font-bold text-muted mb-3">
+              FULLFILL YOUR HAPPINESS
+            </h1>
           </div>
         </div>
         {/* Single item */}
@@ -65,6 +68,9 @@ export default function Carousel() {
             >
               Đặt hàng
             </Button>
+            <h1 class="text-5xl font-bold text-muted mb-3">
+              FULLFILL YOUR HAPPINESS
+            </h1>
           </div>
         </div>
         {/* Single item */}
@@ -83,6 +89,9 @@ export default function Carousel() {
             >
               Đặt hàng
             </Button>
+            <h1 class="text-5xl font-bold text-muted  mb-3">
+              FULLFILL YOUR HAPPINESS
+            </h1>
           </div>
         </div>
       </div>

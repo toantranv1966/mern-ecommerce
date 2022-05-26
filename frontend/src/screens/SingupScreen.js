@@ -51,11 +51,11 @@ export default function SignupScreen() {
 
   return (
     <div className="fix-botton">
-      <Container ClassName="small-container fix-botton">
+      <Container className="small-container">
         <Helmet>
           <title>Đăng ký</title>
         </Helmet>
-        <h1 ClassName="my-3">Đăng ký</h1>
+        <h1 className="text-2xl font-medium mb-3 my-3">Đăng ký</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="name">
             <Form.Label>Tên</Form.Label>

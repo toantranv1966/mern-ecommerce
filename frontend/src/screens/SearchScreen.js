@@ -135,7 +135,7 @@ export default function SearchScreen() {
       </Helmet>
       <Row>
         <Col md={3}>
-          <h3>Danh mục</h3>
+          <h3 className="text-2xl font-medium mb-3 my-3">Danh mục</h3>
           <div>
             <ul>
               <li>
@@ -227,7 +227,7 @@ export default function SearchScreen() {
               <Row className="justify-content-between mb-3">
                 <Col md={6}>
                   <div>
-                    {countProducts === 0 ? 'No' : countProducts} kết quả
+                    {countProducts === 0 ? '0' : countProducts} kết quả
                     {query !== 'all' && ' : ' + query}
                     {category !== 'all' && ' : ' + category}
                     {price !== 'all' && ' : Price ' + price}
@@ -245,7 +245,7 @@ export default function SearchScreen() {
                     ) : null}
                   </div>
                 </Col>
-                <Col className="text-end">
+                <Col className="font-medium text-end">
                   Sắp xếp theo:{' '}
                   <select
                     value={order}

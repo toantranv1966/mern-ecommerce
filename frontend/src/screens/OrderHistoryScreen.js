@@ -54,7 +54,7 @@ export default function OrderHistoryScreen() {
       <Helmet>
         <title>Lịch sử mua hàng</title>
       </Helmet>
-      <h1>Lịch sử mua hàng</h1>
+      <h1 className="text-2xl font-medium mb-3 my-3">Lịch sử mua hàng</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (

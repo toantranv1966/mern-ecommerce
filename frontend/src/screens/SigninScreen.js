@@ -44,11 +44,11 @@ export default function SigninScreen() {
 
   return (
     <div className="fix-botton">
-      <Container ClassName="small-container">
+      <Container className="small-container">
         <Helmet>
           <title>Đăng nhập</title>
         </Helmet>
-        <h1 ClassName="my-3">Đăng nhập</h1>
+        <h1 className="text-2xl font-medium mb-3 my-3">Đăng nhập</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="email">
             <Form.Label>Email</Form.Label>

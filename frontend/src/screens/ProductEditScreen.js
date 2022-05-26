@@ -149,7 +149,7 @@ export default function ProductEditScreen() {
   };
 
   return (
-    <div className="fix-botton">
+    <Container className="small-container fix-botton">
       <Helmet>
         <title>Cập nhật sản phẩm ${productId}</title>
       </Helmet>
@@ -261,6 +261,6 @@ export default function ProductEditScreen() {
           </div>
         </Form>
       )}
-    </div>
+    </Container>
   );
 }

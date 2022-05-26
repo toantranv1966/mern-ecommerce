@@ -92,7 +92,7 @@ export default function ShippingAddressScreen() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlID="postalCode">
-            <Form.Label>PostalCode</Form.Label>
+            <Form.Label>Số điện thoại</Form.Label>
             <Form.Control
               value={postalCode}
               onChange={(e) => setPostalCode(e.target.value)}

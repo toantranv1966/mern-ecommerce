@@ -67,9 +67,11 @@ export default function ProfileScreen() {
       <Helmet>
         <title>Thông tin người dùng</title>
       </Helmet>
-      <h1 className="my-3">Thông tin người dùng</h1>
+      <h1 className="text-2xl font-medium mb-3 my-3 my-3">
+        Thông tin người dùng
+      </h1>
       <form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="name">
+        <Form.Group className="font-medium mb-3" controlId="name">
           <Form.Label>Tên</Form.Label>
           <Form.Control
             value={name}
@@ -77,7 +79,7 @@ export default function ProfileScreen() {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
+        <Form.Group className="font-medium mb-3" controlId="name">
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
@@ -86,21 +88,21 @@ export default function ProfileScreen() {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
+        <Form.Group className="font-medium mb-3" controlId="password">
           <Form.Label>Mật khẩu</Form.Label>
           <Form.Control
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
+        <Form.Group className="font-medium mb-3" controlId="password">
           <Form.Label>Xác nhận Mật khẩu</Form.Label>
           <Form.Control
             type="password"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group>
-        <div className="mb-3">
+        <div className="font-medium mb-3">
           <Button type="submit">Cập nhật</Button>
         </div>
       </form>
