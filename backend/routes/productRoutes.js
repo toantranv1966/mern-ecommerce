@@ -28,7 +28,7 @@ productRouter.post(
       description: 'Mô tả',
     });
     const product = await newProduct.save();
-    res.send({ message: 'Product Create', product });
+    res.send({ message: 'Tạo sản phẩm', product });
   })
 );
 
@@ -50,9 +50,9 @@ productRouter.put(
       product.countInStock = req.body.countInStock;
       product.description = req.body.description;
       await product.save();
-      res.send({ message: 'product Updated' });
+      res.send({ message: 'Đã cập nhật sản phẩm' });
     } else {
-      res.status(404).send({ message: 'product Not Found' });
+      res.status(404).send({ message: 'Không tìm thấy sản phẩm' });
     }
   })
 );
@@ -65,9 +65,9 @@ productRouter.delete(
     const product = await Product.findById(req.params.id);
     if (product) {
       await product.remove();
-      res.send({ message: 'Product Deleted' });
+      res.send({ message: 'Đã xóa sản phẩm' });
     } else {
-      res.status(404).send({ message: 'Product Not Found' });
+      res.status(404).send({ message: 'Không tìm thấy sản phẩm' });
     }
   })
 );
@@ -80,9 +80,7 @@ productRouter.post(
     const product = await Product.findById(productId);
     if (product) {
       if (product.reviews.find((x) => x.name === req.user.name)) {
-        return res
-          .status(400)
-          .send({ message: 'You already submitted a review' });
+        return res.status(400).send({ message: 'Cảm ơn bạn đã đánh giá' });
       }
 
       const review = {
@@ -97,13 +95,13 @@ productRouter.post(
         product.reviews.length;
       const updatedProduct = await product.save();
       res.status(201).send({
-        message: 'Review Created',
+        message: 'Đã tạo đánh giá',
         review: updatedProduct.reviews[updatedProduct.reviews.length - 1],
         numReviews: product.numReviews,
         rating: product.rating,
       });
     } else {
-      res.status(404).send({ message: 'Product Not Found' });
+      res.status(404).send({ message: 'Không tìm thấy sản phẩm' });
     }
   })
 );
@@ -223,7 +221,7 @@ productRouter.get('/slug/:slug', async (req, res) => {
   if (product) {
     res.send(product);
   } else {
-    res.status(404).send({ message: 'Product Not Found' });
+    res.status(404).send({ message: 'Không tìm thấy sản phẩm' });
   }
 });
 
@@ -232,7 +230,7 @@ productRouter.get('/:id', async (req, res) => {
   if (product) {
     res.send(product);
   } else {
-    res.status(404).send({ message: 'Product Not Found' });
+    res.status(404).send({ message: 'Không tìm thấy sản phẩm' });
   }
 });
 export default productRouter;
